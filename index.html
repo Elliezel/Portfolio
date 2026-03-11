@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>RhazelOS Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- BOOT SCREEN -->
+<div id="bootScreen">
+  <div class="boot-box">
+    <p>RHAZ OS v1.0</p>
+    <p>Booting system...</p>
+    <div class="loading-bar"><div id="loadingProgress"></div></div>
+    <p id="loadingText">Initializing modules...</p>
+  </div>
+</div>
+
+<!-- DESKTOP VIDEO BACKGROUND -->
+<video autoplay muted loop id="desktopVideo">
+  <source src="WP.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<!-- WINDOWS -->
+<div class="window" id="profile">
+  <div class="title-bar">
+    <span>profile.exe</span>
+    <div class="buttons">
+      <button onclick="minimizeWindow('profile')">_</button>
+      <button onclick="closeWindow('profile')">X</button>
+    </div>
+  </div>
+  <div class="content">
+    <h3>Rhazel Eli E. Ongtingco</h3>
+    <p>Age: 20</p>
+    <p>Location: Quezon City</p>
+    <p>Second Year Student – Quezon City University</p>
+    <p>Part-time Researcher – Center for Urban Agriculture and Innovation</p>
+    <p>Former Competitive Player – QCU Kyusi Esports Valorant Zenith</p>
+  </div>
+</div>
+
+<div class="window" id="skills">
+  <div class="title-bar">
+    <span>skills.sys</span>
+    <div class="buttons">
+      <button onclick="minimizeWindow('skills')">_</button>
+      <button onclick="closeWindow('skills')">X</button>
+    </div>
+  </div>
+  <div class="content">
+    <h3>Programming</h3>
+    <ul>
+      <li>C#</li>
+      <li>VB</li>
+      <li>Java</li>
+      <li>HTML</li>
+    </ul>
+    <h3>Other Skills</h3>
+    <ul>
+      <li>Research</li>
+      <li>Technical Writing</li>
+      <li>Leadership</li>
+    </ul>
+  </div>
+</div>
+
+<div class="window" id="projects">
+  <div class="title-bar">
+    <span>projects</span>
+    <div class="buttons">
+      <button onclick="minimizeWindow('projects')">_</button>
+      <button onclick="closeWindow('projects')">X</button>
+    </div>
+  </div>
+  <div class="content">
+    <h3>CPU Algorithm Solver</h3>
+    <p>A system that solves CPU scheduling algorithms including FCFS, SJF, and Round Robin.</p>
+    <h3>Gardening Tools CRUD</h3>
+    <p>A CRUD system that logs gardening tools and manages urban agriculture records.</p>
+    <h3>Missionaries and Cannibals Game</h3>
+    <p>A logic puzzle simulating the classic river crossing problem.</p>
+  </div>
+</div>
+
+<div class="window" id="experience">
+  <div class="title-bar">
+    <span>experience.txt</span>
+    <div class="buttons">
+      <button onclick="minimizeWindow('experience')">_</button>
+      <button onclick="closeWindow('experience')">X</button>
+    </div>
+  </div>
+  <div class="content">
+    <h3>Research</h3>
+    <p>Center for Urban Agriculture and Innovation – QCU</p>
+  </div>
+</div>
+
+<div class="window" id="contact">
+  <div class="title-bar">
+    <span>contact.exe</span>
+    <div class="buttons">
+      <button onclick="minimizeWindow('contact')">_</button>
+      <button onclick="closeWindow('contact')">X</button>
+    </div>
+  </div>
+  <div class="content">
+    <p>Email: ongtingco.24-1613@qcu.edu.ph</p>
+    <p>GitHub: github.com/Elliezel</p>
+  </div>
+</div>
+
+<!-- TASKBAR -->
+<div id="taskbar">
+  <div id="windowsIcon" onclick="toggleStartMenu()">🪟</div>
+  <div class="task-icons">
+    <div class="task-icon" onclick="openWindow('profile')"><div class="icon">👤</div><span>Profile</span></div>
+    <div class="task-icon" onclick="openWindow('skills')"><div class="icon">🧠</div><span>Skills</span></div>
+    <div class="task-icon" onclick="openWindow('projects')"><div class="icon">📁</div><span>Projects</span></div>
+    <div class="task-icon" onclick="openWindow('experience')"><div class="icon">📜</div><span>Experience</span></div>
+    <div class="task-icon" onclick="openWindow('contact')"><div class="icon">📧</div><span>Contact</span></div>
+  </div>
+  <div id="taskClock"></div>
+</div>
+
+<!-- START MENU -->
+<div id="startMenu">
+  <div class="start-item" onclick="openWindow('profile')">Profile</div>
+  <div class="start-item" onclick="openWindow('skills')">Skills</div>
+  <div class="start-item" onclick="openWindow('projects')">Projects</div>
+  <div class="start-item" onclick="openWindow('experience')">Experience</div>
+  <div class="start-item" onclick="openWindow('contact')">Contact</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
